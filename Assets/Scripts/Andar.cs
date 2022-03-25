@@ -29,4 +29,14 @@ public class Andar : MonoBehaviour
             transform.Rotate(new Vector3(0, 0.5f, 0));
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("COLIDIU");
+        
+        if(collision.collider.name.StartsWith("Bola"))
+        {
+            Debug.Log("BATEU NA BOLA");
+        }
+    }
 }
